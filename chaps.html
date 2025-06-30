@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Оглавление</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      height: 100vh;
+      display: flex;
+    }
+
+    /* чекбокс и метка */
+    #toggle {
+      display: none;
+    }
+
+    label.toggle-button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #3b82f6;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    #sidebar {
+      width: 300px;
+      background: #222;
+      color: white;
+      padding: 1em;
+      transition: transform 0.3s ease;
+    }
+
+    #toggle:checked ~ #sidebar {
+      transform: translateX(-100%);
+    }
+
+    #viewer {
+      flex-grow: 1;
+      border: none;
+      width: 100%;
+    }
+
+    #sidebar a {
+      color: #3b82f6;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 0.5em;
+    }
+
+    #sidebar a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body bgcolor=#222>
+  <input type="checkbox" id="toggle">
+  <label for="toggle" class="toggle-button">☰</label>
+  <div id="sidebar">
+    <br>
+    <br>
+    <a href="main.html"> На главную страницу </a>
+    <h1>Оглавление</h1>
+    <h2> Пролог </h2>
+    <ul>
+      <li><a href="chap01.html" target="viewer">Пролог: Глава 0-1</a></li>
+      <li><a href="chap02.html" target="viewer">Пролог: Глава 0-2</a></li>
+      <li><a href="chap03.html" target="viewer">Пролог: Глава 0-3</a></li>
+      <li><a href="chap04.html" target="viewer">Пролог: Глава 0-4</a></li>
+      <li><a href="chap05.html" target="viewer">Пролог: Глава 0-5</a></li>
+      <li><a href="chap06.html" target="viewer">Пролог: Глава 0-6</a></li>
+      <li><a href="chap07.html" target="viewer">Пролог: Глава 0-7</a></li>
+    </ul>
+<!--
+    <h2>Основная часть</h2>
+    <ul>
+     <li><a href="chap1.html" target="viewer">Глава 1</a></li>
+    </ul>-->
+  </div>
+  <iframe id="viewer" name="viewer"></iframe>
+</body>
+</html>
