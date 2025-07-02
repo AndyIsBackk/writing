@@ -1,0 +1,7 @@
+body
+{background-color: #222; color:azure; font-family: sans-serif; margin: 0; display:flex; justify-content: center; align-items: center; height:100vh;}
+.card {background-color: #1f1f1f; border-radius: 10px; box-shadow: 0 0 20px #000; overflow: hidden; width: 320px; text-align: center;}
+.cover{width: 100%; height: auto}
+.info{padding: auto;}
+.read_button{display: inline-block; margin-top: 10px; padding: 10px 20px; background: #3b82f6; color: white; border: none; border-radius: 6px; text-decoration: none; font-weight: bold; transition: background 0.3s}
+.read_button:hover{ background: #2563eb }
